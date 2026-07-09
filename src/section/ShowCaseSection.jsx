@@ -1,12 +1,12 @@
-import  { useRef } from 'react'
-import { gsap } from 'gsap';
+import { useRef } from "react";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowCaseSection = () => {
- const sectionRef = useRef(null);
+  const sectionRef = useRef(null);
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
@@ -16,7 +16,7 @@ const ShowCaseSection = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
 
     // Animations for each app showcase
@@ -38,7 +38,7 @@ const ShowCaseSection = () => {
             trigger: card,
             start: "top bottom-=100",
           },
-        }
+        },
       );
     });
   }, []);
@@ -49,15 +49,16 @@ const ShowCaseSection = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="/images/spotify-clone.png" alt="Ryde App Interface" />
+              <img src="/images/food.jpeg" alt="Ryde App Interface" />
             </div>
             <div className="text-content">
-              <h2>
-               Spotify Clone using React JS  and TailwindCss, User-Friendly Clone App
-              </h2>
+              <h2>Foodie-Frenzy | Responsive Food Delivery Website</h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React JS & TailwindCSS for a fast,
-                user-friendly experience.
+                A fully responsive food delivery web application built with
+                React JS, Tailwind CSS, Node.js, Express.js, and MongoDB. It
+                includes a modern customer-facing frontend, a secure backend
+                API, and a powerful admin panel for managing food items, orders,
+                users, and overall platform operations.
               </p>
             </div>
           </div>
@@ -75,9 +76,9 @@ const ShowCaseSection = () => {
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/Gemini-clone.png" alt="YC Directory App" />
+                <img src="/images/ecommerce.jpeg" alt="YC Directory App" />
               </div>
-              <h2>Gemini Clone </h2>
+              <h2>Ecommerce web application</h2>
             </div>
           </div>
         </div>
@@ -85,4 +86,4 @@ const ShowCaseSection = () => {
     </div>
   );
 };
-export default ShowCaseSection
+export default ShowCaseSection;
